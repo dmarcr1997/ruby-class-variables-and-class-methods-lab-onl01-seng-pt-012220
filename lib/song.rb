@@ -33,8 +33,23 @@ class Song
   end  
       
   def self.artist
-    
+    temp_var = ""
+    temp_hash = {}
+    @@artist.each do |g|
+      if g == temp_var
+        if temp_hash[g] >= 2
+          temp_hash[g] += 1
+        else 
+          temp_hash[g] = 2
+        end
+        temp_var = g
+      else
+        temp_hash[g] = 1
+        temp_var = g
+      end
+    end
   end
+  
   def self.count 
     @@count
   end

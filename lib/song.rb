@@ -1,0 +1,38 @@
+class Song
+  @@count = 0
+  @@genre = []
+  
+  attr_accessor :name, :artist, :genre
+  
+  def initialize(name, artist, genre)
+    @name = name
+    @artist = artist
+    @genre = genre
+    @@count+=1
+    @@genre << @genre
+  end
+  
+  def self.genre
+    temp_var = ""
+    temp_hash = {}
+    @@genre.each do |g|
+      if g == temp_var
+        if temp_hash[g] >= 2
+          temp_hash[g] += 1
+        else 
+          temp_hash[g] = 2
+        end
+        temp_var = g
+      else
+        temp_hash[g] = 1
+        temp_var = g
+      end
+    end
+    @@genre = @@genre.uniq
+  end  
+      
+  end
+  def self.count 
+    @@count
+  end
+end

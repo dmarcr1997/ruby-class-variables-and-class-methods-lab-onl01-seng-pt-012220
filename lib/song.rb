@@ -15,12 +15,12 @@ class Song
   
   def self.genres
     temp_var = ""
-    temp_hash = []
+    temp_arr = []
     @@genres.each do |g|
       if g == temp_var
       
       else
-        temp_hash << g
+        temp_arr << g
         temp_var = g
       end
     end
@@ -34,7 +34,7 @@ class Song
       if g == temp_var
       
       else
-        temp_hash << g
+        temp_arr << g
         temp_var = g
       end
     end

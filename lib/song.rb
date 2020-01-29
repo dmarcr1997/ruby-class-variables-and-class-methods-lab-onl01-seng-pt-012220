@@ -79,7 +79,7 @@ class Song
 #     temp_hash  
 #   end
   
-#   def self.count 
-#     @@count
-#   end
-# end
+  def self.count 
+    @@count
+  end
+end

@@ -62,7 +62,7 @@ class Song
   def artist_count
     temp_var = ""
     temp_arr = {}
-    @@genre.each do |g|
+    @@artists.each do |g|
       if g == temp_var
         if temp_hash[g] >= 2
           temp_hash[g] += 1

@@ -29,7 +29,7 @@ class Song
       
   def self.artists
     temp_var = ""
-    temp_hash = []
+    temp_arr = []
     @@artists.each do |g|
       if g == temp_var
       

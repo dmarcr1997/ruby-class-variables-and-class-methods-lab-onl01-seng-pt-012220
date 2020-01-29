@@ -60,7 +60,7 @@ class Song
     temp_hash
   end
   
-  def artist_count
+  def self.artist_count
     temp_var = ""
     temp_hash = {}
     @@artists.each do |g|
@@ -76,7 +76,7 @@ class Song
         temp_var = g
       end
     end
-    temp_hash  
+    temp_hash
   end
   
   def self.count 

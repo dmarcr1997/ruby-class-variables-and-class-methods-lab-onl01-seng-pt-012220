@@ -1,8 +1,9 @@
 class Song
-  attr_accessor :name, :artist, :genre
   @@count = 0
   @@genres = []
   @@artists = []
+  attr_accessor :name, :artist, :genre
+  
   def initialize(name, artist, genre)
     @@genres << genre
     @@artists << artist
@@ -12,10 +13,10 @@ class Song
     @@count+=1
   end
   
-  def self.genre
+  def self.genres
     temp_var = ""
     temp_hash = []
-    @@genre.each do |g|
+    @@genres.each do |g|
       if g == temp_var
       
       else
@@ -26,10 +27,10 @@ class Song
     temp_arr
   end  
       
-  def self.artist
+  def self.artists
     temp_var = ""
     temp_hash = []
-    @@artist.each do |g|
+    @@artists.each do |g|
       if g == temp_var
       
       else
@@ -43,7 +44,7 @@ class Song
   def self.genre_count
     temp_var = ""
     temp_arr = {}
-    @@genre.each do |g|
+    @@genres.each do |g|
       if g == temp_var
         if temp_hash[g] >= 2
           temp_hash[g] += 1

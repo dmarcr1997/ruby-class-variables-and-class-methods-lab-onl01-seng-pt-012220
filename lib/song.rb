@@ -15,7 +15,35 @@ class Song
   
   def self.genre
     temp_var = ""
-    temp_hash = {}
+    temp_hash = []
+    @@genre.each do |g|
+      if g == temp_var
+      
+      else
+        temp_hash << g
+        temp_var = g
+      end
+    end
+    temp_arr
+  end  
+      
+  def self.artist
+    temp_var = ""
+    temp_hash = []
+    @@artist.each do |g|
+      if g == temp_var
+      
+      else
+        temp_hash << g
+        temp_var = g
+      end
+    end
+    temp_arr
+  end
+  
+  def self.genre_count
+    temp_var = ""
+    temp_arr = {}
     @@genre.each do |g|
       if g == temp_var
         if temp_hash[g] >= 2
@@ -29,14 +57,12 @@ class Song
         temp_var = g
       end
     end
-    @@genre = @@genre.uniq
     temp_hash
-  end  
-      
-  def self.artist
+  end
+  def artist_count
     temp_var = ""
-    temp_hash = {}
-    @@artist.each do |g|
+    temp_arr = {}
+    @@genre.each do |g|
       if g == temp_var
         if temp_hash[g] >= 2
           temp_hash[g] += 1
@@ -49,11 +75,9 @@ class Song
         temp_var = g
       end
     end
+    temp_hash  
   end
   
-  def self.genre_count
-    
-  end
   def self.count 
     @@count
   end

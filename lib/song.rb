@@ -59,26 +59,27 @@ class Song
     end
     temp_hash
   end
-  def artist_count
-    temp_var = ""
-    temp_hash = {}
-    @@artists.each do |g|
-      if g == temp_var
-        if temp_hash[g] >= 2
-          temp_hash[g] += 1
-        else 
-          temp_hash[g] = 2
-        end
-        temp_var = g
-      else
-        temp_hash[g] = 1
-        temp_var = g
-      end
-    end
-    temp_hash  
-  end
   
-  def self.count 
-    @@count
-  end
-end
+#   def artist_count
+#     temp_var = ""
+#     temp_hash = {}
+#     @@artists.each do |g|
+#       if g == temp_var
+#         if temp_hash[g] >= 2
+#           temp_hash[g] += 1
+#         else 
+#           temp_hash[g] = 2
+#         end
+#         temp_var = g
+#       else
+#         temp_hash[g] = 1
+#         temp_var = g
+#       end
+#     end
+#     temp_hash  
+#   end
+  
+#   def self.count 
+#     @@count
+#   end
+# end
